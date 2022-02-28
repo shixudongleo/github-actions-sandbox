@@ -1,0 +1,13 @@
+name: leo
+age: 22
+Address: "Singapore, Singapore"
+active: true
+key: 
+  key: value
+  key2: 33
+  key3: 
+    key: value
+    key2: value
+array: 
+  - item1
+  - item2
