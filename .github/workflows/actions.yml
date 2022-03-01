@@ -7,7 +7,10 @@ on:
   schedule:
     - cron: '14 13 * * *'
     - cron: '15 13 * * *'
-  # push:
+  push:
+    branches:
+      - master
+      - 'feature/*'
   pull_request:
     types: [opened, assigned, reopened, closed]
 
