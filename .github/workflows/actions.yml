@@ -2,7 +2,10 @@ name: Action Workflow
 
 # event trigger
 on: 
-  push:
+  schedule: 
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
+  # push:
   pull_request:
     types: [opened, assigned, reopened, closed]
 
