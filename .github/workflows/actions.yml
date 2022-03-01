@@ -5,8 +5,8 @@ on:
   repository_dispatch:
     types: [build]
   schedule:
-    - cron: '14 12 * * *'
-    - cron: '15 12 * * *'
+    - cron: '14 13 * * *'
+    - cron: '15 13 * * *'
   # push:
   pull_request:
     types: [opened, assigned, reopened, closed]
