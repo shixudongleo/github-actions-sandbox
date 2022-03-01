@@ -18,6 +18,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: echo currnt branch name
+        run: echo $GITHUB_REF
       - name: echo event payload
         run: echo ${{ github.event.client_payload.env }}
       - name: List Files
