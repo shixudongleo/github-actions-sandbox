@@ -1,7 +1,10 @@
 name: Action Workflow
 
 # event trigger
-on: [push, pull_request]
+on: 
+  push:
+  pull_request:
+    types: [opened, assigned, reopened, closed]
 
 jobs:
   run-github-actions:
