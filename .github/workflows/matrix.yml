@@ -16,10 +16,11 @@ jobs:
   node-matrix:
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6, 8, 10]
       fail-fast: true
       max-parallel: 3
-    runs-on:  ubuntu-latest
+    runs-on:  ${{ matrix.os }}
     steps:
       - name: Log node node-version 
         run: node -v
