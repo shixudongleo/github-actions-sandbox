@@ -13,3 +13,20 @@ jobs:
       - name: Log new node node-version 
         run: node -v
         
+  node-matrix:
+    strategy:
+      matrix:
+        node_version: [6, 8, 10]
+      fail-fast: true
+      max-parallel: 3
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Log node node-version 
+        run: node -v
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Log new node node-version 
+        run: node -v
+        
+  
