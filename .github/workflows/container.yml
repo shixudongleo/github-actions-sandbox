@@ -19,4 +19,4 @@ jobs:
           cat /etc/os-release
 
       - name: Test Mongo Connection
-        run: nc -z mongo 27017
+        run: curl http://localhost:27017
