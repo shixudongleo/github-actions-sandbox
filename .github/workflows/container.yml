@@ -11,12 +11,12 @@ jobs:
       - name: Log node node-version
         run: nodev -v
       - name: Node version from docker
-        uses: node:10.16-jessie
+        uses: docker://node:10.16-jessie
         with: 
           entrypoint: /usr/local/bin/node
           args: '-v'
       - name: Container cmd
-        uses: node:10.16-jessie
+        uses: docker://node:10.16-jessie
         with: 
           entrypoint: /bin/echo
           args: 'Hello World!'
