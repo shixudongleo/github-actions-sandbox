@@ -10,16 +10,16 @@ jobs:
     steps:
       - name: Log node node-version
         run: nodev -v
-      - name: Container cmd
-        uses: docker://node:8
-        with: 
-          entrypoint: /bin/echo
-          args: 'Hello World!'
       - name: Node version from docker
-        uses: docker://node:8
+        uses: node:10.16-jessie
         with: 
           entrypoint: /usr/local/bin/node
           args: '-v'
+      - name: Container cmd
+        uses: node:10.16-jessie
+        with: 
+          entrypoint: /bin/echo
+          args: 'Hello World!'
 
   node-docker:
     runs-on: ubuntu-latest
