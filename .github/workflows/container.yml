@@ -8,8 +8,6 @@ jobs:
       image: node:16
     
     steps:
-      - name: Log node node-version
-        run: nodev -v
       - name: Node version from docker
         uses: docker://node:10.16-jessie
         with: 
