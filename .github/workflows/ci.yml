@@ -3,6 +3,8 @@ name: CI React
 on:
   pull_request:
     branches: [develop]
+  push:
+    branches: [develop]
 
 jobs:
   app_build:
@@ -10,6 +12,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
       - name: Setup NodeJS
         uses: actions/setup-node@v1
         with:
