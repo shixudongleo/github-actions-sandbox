@@ -1,8 +1,10 @@
 name: CI React
 
 on:
-  pull_request:
-    branches: [develop]
+  push:
+    branches: [workflow]
+  # pull_request:
+  #   branches: [develop]
 
 jobs:
   app_build:
